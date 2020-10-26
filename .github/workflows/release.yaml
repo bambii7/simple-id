@@ -13,6 +13,8 @@ jobs:
       with:
         path: '**/node_modules'
         key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+    - name: Fetch Git tags
+      run: git fetch --prune --unshallow --tags
     - name: Authenticate With NPM 
       run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > .npmrc
     - name: Install or fail node_modules
