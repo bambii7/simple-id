@@ -1,7 +1,7 @@
 {
-  "name": "simple-id",
+  "name": "plain-id",
   "version": "0.0.0",
-  "description": "A simple id generator for unique keys and other frontend tasks",
+  "description": "A simple key generator for unique keys and other frontend tasks",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bambii7/simple-id.git"
+    "url": "git+https://github.com/ofhope/plain-id.git"
   },
   "author": "Alexis Hope",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bambii7/simple-id/issues"
+    "url": "https://github.com/ofhope/plain-id/issues"
   },
-  "homepage": "https://github.com/bambii7/simple-id#readme",
+  "homepage": "https://github.com/ofhope/plain-id#readme",
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "esbuild": "^0.7.21",
