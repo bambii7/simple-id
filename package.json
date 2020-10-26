@@ -2,9 +2,10 @@
   "name": "simple-id",
   "version": "0.0.0",
   "description": "A simple id generator for unique keys and other frontend tasks",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "esbuild --minify --bundle --outdir=dist src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/bambii7/simple-id/issues"
   },
-  "homepage": "https://github.com/bambii7/simple-id#readme"
+  "homepage": "https://github.com/bambii7/simple-id#readme",
+  "devDependencies": {
+    "esbuild": "^0.7.21"
+  }
 }
