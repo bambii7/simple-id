@@ -10,6 +10,6 @@ jobs:
         path: '**/node_modules'
         key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.lock') }}
     - name: Install modules
-      run: npm install
+      run: npm ci
     - name: Run Jest tests
       run: npm t

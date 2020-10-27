@@ -3,7 +3,7 @@ name: Release to NPM
 on:
   push:
       tags:
-          - v0.*
+          - v*
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -17,11 +17,9 @@ jobs:
       run: git fetch --prune --unshallow --tags
     - name: Authenticate With NPM 
       run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > .npmrc
-    - name: Install or fail node_modules
+    - name: Install node_modules
       run: npm ci
     - name: Build
       run: npm run build
-    - name: Update package version
-      run: npm --no-git-tag-version version from-git
     - name: Release
       run: npm publish
