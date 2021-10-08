@@ -9,6 +9,7 @@ jobs:
       with:
         path: '**/node_modules'
         key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.lock') }}
+        node-version: '15'
     - name: Install modules
       run: npm install
     - name: Run Jest tests
